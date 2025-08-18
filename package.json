@@ -6,17 +6,31 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:db": "npx ts-node src/lib/database-test.ts",
+    "seed:categories": "node createCategories.js"
   },
   "dependencies": {
+    "dotenv": "^16.6.1",
+    "next": "15.4.6",
+    "pg": "^8.16.3",
+    "pg-hstore": "^2.3.4",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.4.6"
+    "sequelize": "^6.37.7",
+    "umzug": "^3.8.1"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@types/jest": "^30.0.0",
     "@types/node": "^20",
+    "@types/pg": "^8.15.5",
     "@types/react": "^19",
-    "@types/react-dom": "^19"
+    "@types/react-dom": "^19",
+    "jest": "^30.0.5",
+    "ts-jest": "^29.4.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
   }
 }
