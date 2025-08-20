@@ -12,14 +12,14 @@ export interface TaskAttributes {
   updatedAt: Date;
 }
 
-// Optional attributes for Task creation (id, timestamps, completed are auto-generated/have defaults)
+
 export interface TaskCreationAttributes
   extends Optional<
     TaskAttributes,
     'id' | 'completed' | 'createdAt' | 'updatedAt'
   > {}
 
-// Task model class extending Sequelize Model
+
 export class Task
   extends Model<TaskAttributes, TaskCreationAttributes>
   implements TaskAttributes
@@ -33,7 +33,7 @@ export class Task
   public readonly updatedAt!: Date;
 }
 
-// Initialize the Task model
+
 Task.init(
   {
     id: {
