@@ -1,7 +1,7 @@
 import { DataTypes, Model, Optional } from 'sequelize';
 import sequelize from '../lib/database';
 
-// TypeScript interface for Task attributes
+
 export interface TaskAttributes {
   id: number;
   title: string;
