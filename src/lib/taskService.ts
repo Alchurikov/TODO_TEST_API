@@ -63,7 +63,6 @@ export async function createTask(input: CreateTaskInput) {
 
     return newTask;
   } catch (error) {
-    // Re-throw custom errors
     if (error instanceof ValidationError) {
       throw error;
     }
